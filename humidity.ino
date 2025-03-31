@@ -8,7 +8,6 @@ const char password[] = "mypassword";  // password of your wifi
 
 String HOST_NAME = "http://10.0.10.2"; // REPLACE WITH YOUR WEBSERVERS's IP ADDRESS
 String PHP_FILE_NAME   = "/100insert_temp.php";  //REPLACE WITH YOUR PHP FILE NAME
-String tempQuery = "?temperature=31.0";
 
 // DHT Sensor Configurations
 #define DHTPIN 14
@@ -61,7 +60,6 @@ void setup() {
 }
 
 void loop() {
-  // Check if 30 seconds have passed
   if (millis() - lastSendTime >= interval) {
     lastSendTime = millis();  // Update last send time
     
